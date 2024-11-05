@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Storage Info - AzureBlobStorage</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Storage Info";
+        var mkdocs_page_input_path = "info.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> AzureBlobStorage
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Storage Info</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#caracteristicas-principales">Características Principales</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tipos-de-blobs">Tipos de Blobs</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#opciones-de-niveles-de-acceso-tiers">Opciones de Niveles de Acceso (Tiers)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#seguridad">Seguridad</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#casos-de-uso">Casos de Uso</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#precios">Precios</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#como-empezar">Cómo Empezar</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#referencias">Referencias</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">AzureBlobStorage</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Storage Info</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="azure-blob-storage">Azure Blob Storage</h1>
+<p>Azure Blob Storage es un servicio de almacenamiento en la nube proporcionado por <strong>Microsoft Azure</strong> que permite almacenar grandes cantidades de datos no estructurados, como documentos, imágenes, archivos de video y otros tipos de archivos binarios. Blob Storage es ideal para aplicaciones que necesitan almacenar y acceder a datos de forma escalable, segura y económica.</p>
+<h2 id="caracteristicas-principales">Características Principales</h2>
+<ul>
+<li><strong>Escalabilidad y Flexibilidad</strong>: Azure Blob Storage está diseñado para manejar grandes cantidades de datos, y su capacidad de almacenamiento puede expandirse o reducirse según las necesidades de la aplicación.</li>
+<li><strong>Acceso Seguro</strong>: Ofrece múltiples niveles de seguridad, como autenticación mediante <strong>Azure Active Directory (AAD)</strong> y <strong>tokens de acceso compartido (SAS)</strong>.</li>
+<li><strong>Alta Disponibilidad y Durabilidad</strong>: Los datos en Blob Storage están replicados en varios centros de datos para garantizar su disponibilidad y protección ante fallos.</li>
+<li><strong>Acceso Global</strong>: Los datos pueden ser accesibles a través de Internet desde cualquier ubicación, lo cual facilita el almacenamiento y la distribución de contenido.</li>
+<li><strong>Integración con otros servicios de Azure</strong>: Blob Storage se integra fácilmente con servicios como <strong>Azure Machine Learning</strong>, <strong>Azure Data Lake</strong>, y <strong>Azure Data Factory</strong>, entre otros.</li>
+</ul>
+<h2 id="tipos-de-blobs">Tipos de Blobs</h2>
+<p>Existen tres tipos de blobs en Azure Blob Storage:</p>
+<ol>
+<li><strong>Blobs de bloque (Block Blobs)</strong>:</li>
+<li>Ideales para almacenar archivos binarios o de texto.</li>
+<li>Compuestos por bloques que pueden ser gestionados individualmente, lo cual permite subir archivos de gran tamaño en múltiples partes.</li>
+<li>
+<p>Muy utilizados para almacenamiento de contenido estático en aplicaciones web, como imágenes y videos.</p>
+</li>
+<li>
+<p><strong>Blobs de anexado (Append Blobs)</strong>:</p>
+</li>
+<li>Optimizados para operaciones de adición de datos.</li>
+<li>
+<p>Comúnmente usados para registros de auditoría y archivos de log, donde se necesita agregar información de manera continua sin modificar los datos existentes.</p>
+</li>
+<li>
+<p><strong>Blobs de página (Page Blobs)</strong>:</p>
+</li>
+<li>Diseñados para operaciones de lectura/escritura aleatoria.</li>
+<li>Utilizados en escenarios donde se requiere un almacenamiento de acceso rápido, como discos de máquinas virtuales (VMs).</li>
+</ol>
+<h2 id="opciones-de-niveles-de-acceso-tiers">Opciones de Niveles de Acceso (Tiers)</h2>
+<p>Azure Blob Storage permite definir niveles de acceso a los datos, optimizando costos según la frecuencia de acceso:</p>
+<ul>
+<li><strong>Hot</strong>: Ideal para datos que se necesitan acceder de manera frecuente.</li>
+<li><strong>Cool</strong>: Diseñado para datos que no se acceden con tanta frecuencia, pero que necesitan almacenarse por al menos 30 días.</li>
+<li><strong>Archive</strong>: Nivel de acceso para datos que raramente se necesitan, con un almacenamiento de bajo costo. Requiere tiempo para rehidratación si se desean acceder los datos.</li>
+</ul>
+<h2 id="seguridad">Seguridad</h2>
+<p>Azure Blob Storage ofrece varios mecanismos de seguridad:</p>
+<ul>
+<li><strong>Cifrado en reposo</strong>: Todos los datos almacenados en Azure Blob Storage se cifran automáticamente.</li>
+<li><strong>Cifrado en tránsito</strong>: El servicio soporta HTTPS para proteger los datos mientras se transfieren.</li>
+<li><strong>Control de acceso basado en roles (RBAC)</strong>: Se puede gestionar quién tiene acceso a los datos mediante permisos específicos asignados a los usuarios y roles en Azure Active Directory.</li>
+<li><strong>Tokens de acceso compartido (SAS)</strong>: Permiten otorgar permisos de acceso temporales a los blobs o contenedores sin exponer las credenciales principales de la cuenta.</li>
+</ul>
+<h2 id="casos-de-uso">Casos de Uso</h2>
+<p>Azure Blob Storage es utilizado en una variedad de escenarios, tales como:</p>
+<ul>
+<li><strong>Almacenamiento de datos estáticos para aplicaciones web</strong>: Permite almacenar y distribuir imágenes, videos y otros contenidos estáticos para aplicaciones y sitios web.</li>
+<li><strong>Almacenamiento y procesamiento de datos para análisis</strong>: Datos sin procesar pueden almacenarse en Blob Storage para luego ser analizados usando herramientas de Big Data.</li>
+<li><strong>Respaldo y recuperación</strong>: Proporciona un espacio seguro para el almacenamiento de copias de seguridad de datos críticos.</li>
+<li><strong>Streaming de medios</strong>: Adecuado para almacenar contenido de video y otros medios que necesitan entregarse mediante streaming.</li>
+<li><strong>Archivos de log y auditoría</strong>: Los blobs de anexado son ideales para almacenar archivos de log generados por aplicaciones y dispositivos.</li>
+</ul>
+<h2 id="precios">Precios</h2>
+<p>El precio de Azure Blob Storage se basa en varios factores:</p>
+<ul>
+<li><strong>Capacidad de almacenamiento</strong>: La cantidad de datos almacenados y el nivel de acceso elegido.</li>
+<li><strong>Operaciones y transferencias de datos</strong>: Los costos varían según las operaciones de lectura y escritura realizadas en los blobs y la transferencia de datos fuera de la red de Azure.</li>
+<li><strong>Redundancia</strong>: Azure ofrece varias opciones de redundancia (LRS, ZRS, GRS y RA-GRS) que varían en costo y nivel de replicación de datos.</li>
+</ul>
+<p>Para obtener más información sobre los precios actuales, puedes visitar la <a href="https://azure.microsoft.com/en-us/pricing/">página oficial de precios de Azure Blob Storage</a>.</p>
+<h2 id="como-empezar">Cómo Empezar</h2>
+<ol>
+<li><strong>Crear una cuenta de almacenamiento</strong> en el portal de Azure.</li>
+<li><strong>Configurar un contenedor</strong> en tu cuenta de almacenamiento.</li>
+<li><strong>Cargar datos</strong> en Blob Storage a través de herramientas como el portal de Azure, CLI de Azure, SDKs o APIs REST.</li>
+<li><strong>Gestionar y proteger</strong> el acceso a tus datos con los permisos y opciones de seguridad.</li>
+</ol>
+<h2 id="referencias">Referencias</h2>
+<p>Para más información, visita la <a href="https://docs.microsoft.com/es-es/azure/storage/blobs/">documentación oficial de Azure Blob Storage</a>.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

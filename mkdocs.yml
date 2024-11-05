@@ -1,0 +1,5 @@
+site_name: AzureBlobStorage
+nav: 
+ - Home: index.md
+ - Storage Info: info.md
+theme: readthedocs
